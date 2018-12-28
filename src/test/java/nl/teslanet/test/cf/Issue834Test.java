@@ -16,6 +16,19 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+
+/**
+ * Test to clarify Californium issue #834
+ * @author Rogier Cobben
+ * 
+ * Results :
+ * Failed tests:
+ *    testGetWithLargePayload(nl.teslanet.test.cf.Issue834Test): wrong content length returned:  expected:<8192> but was:<2012>
+ *    testDeleteWithLargePayload(nl.teslanet.test.cf.Issue834Test): wrong content length returned:  expected:<8192> but was:<2012>
+ *    testPatchWithLargePayload(nl.teslanet.test.cf.Issue834Test): wrong content length returned:  expected:<8192> but was:<2012>
+ *    testFetchWithLargePayload(nl.teslanet.test.cf.Issue834Test): wrong content length returned:  expected:<8192> but was:<2012>
+ * Tests run: 12, Failures: 4, Errors: 0, Skipped: 0
+ */
 public class Issue834Test
 {
 	private static final int SMALL_CONTENT_SIZE = 10;
